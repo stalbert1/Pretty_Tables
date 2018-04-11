@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pretty_Tables" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="21a-7Z-n2q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Verified"/>
+                                    <segment title="UnVerified"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="receipt" translatesAutoresizingMaskIntoConstraints="NO" id="POf-zH-s6t">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="g8h-aM-chK"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zOu-M0-gXs">
+                                <rect key="frame" x="0.0" y="48" width="375" height="419"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zOu-M0-gXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0eC-1H-baW"/>
+                            <constraint firstItem="zOu-M0-gXs" firstAttribute="top" secondItem="21a-7Z-n2q" secondAttribute="bottom" id="0to-Zp-QAc"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4te-bU-QdD"/>
+                            <constraint firstItem="21a-7Z-n2q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cdr-X8-LMf"/>
+                            <constraint firstItem="21a-7Z-n2q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EHN-Rh-UDx"/>
+                            <constraint firstItem="zOu-M0-gXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GUm-AD-u4w"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HOL-uj-IrP"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="He5-TS-d5N"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="top" secondItem="zOu-M0-gXs" secondAttribute="bottom" id="MZJ-O6-3Wk"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NmP-RO-hFS"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMG-iu-WWT"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="top" secondItem="zOu-M0-gXs" secondAttribute="bottom" id="VMZ-Ta-Fdz"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lQi-kA-rsp"/>
+                            <constraint firstItem="21a-7Z-n2q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oSu-EY-f3p"/>
+                            <constraint firstItem="zOu-M0-gXs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tJT-On-YOT"/>
+                            <constraint firstItem="POf-zH-s6t" firstAttribute="top" secondItem="zOu-M0-gXs" secondAttribute="bottom" id="ysG-9W-epx"/>
+                            <constraint firstItem="zOu-M0-gXs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zsu-bT-cvd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="zOu-M0-gXs" id="vVn-ko-iV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="receipt" width="750" height="454"/>
+    </resources>
+</document>

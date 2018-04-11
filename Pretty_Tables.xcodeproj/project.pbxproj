@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF07AE232064905300CCB783 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07AE222064905300CCB783 /* Receipt.swift */; };
+		CF07AE252064967C00CCB783 /* ReceiptStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07AE242064967C00CCB783 /* ReceiptStore.swift */; };
 		CF3A820420607BC300FCC8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A820320607BC300FCC8FA /* AppDelegate.swift */; };
 		CF3A820620607BC300FCC8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A820520607BC300FCC8FA /* ViewController.swift */; };
 		CF3A820920607BC300FCC8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A820720607BC300FCC8FA /* Main.storyboard */; };
 		CF3A820B20607BC300FCC8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3A820A20607BC300FCC8FA /* Assets.xcassets */; };
 		CF3A820E20607BC300FCC8FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3A820C20607BC300FCC8FA /* LaunchScreen.storyboard */; };
+		CF3A8217206096FB00FCC8FA /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A8215206096FB00FCC8FA /* ReceiptCell.swift */; };
+		CF3A8218206096FB00FCC8FA /* ReceiptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3A8216206096FB00FCC8FA /* ReceiptCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF07AE222064905300CCB783 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		CF07AE242064967C00CCB783 /* ReceiptStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptStore.swift; sourceTree = "<group>"; };
 		CF3A820020607BC300FCC8FA /* Pretty_Tables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pretty_Tables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3A820320607BC300FCC8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3A820520607BC300FCC8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,8 @@
 		CF3A820A20607BC300FCC8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3A820D20607BC300FCC8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3A820F20607BC300FCC8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF3A8215206096FB00FCC8FA /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
+		CF3A8216206096FB00FCC8FA /* ReceiptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF07AE1E20648D6700CCB783 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF3A820720607BC300FCC8FA /* Main.storyboard */,
+				CF3A8215206096FB00FCC8FA /* ReceiptCell.swift */,
+				CF3A8216206096FB00FCC8FA /* ReceiptCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF07AE1F20648DC600CCB783 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF07AE222064905300CCB783 /* Receipt.swift */,
+				CF07AE242064967C00CCB783 /* ReceiptStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF07AE2020648DD900CCB783 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF3A820520607BC300FCC8FA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF07AE2120648DE900CCB783 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CF3A820320607BC300FCC8FA /* AppDelegate.swift */,
+				CF3A820C20607BC300FCC8FA /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		CF3A81F720607BC300FCC8FA = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +98,12 @@
 		CF3A820220607BC300FCC8FA /* Pretty_Tables */ = {
 			isa = PBXGroup;
 			children = (
-				CF3A820320607BC300FCC8FA /* AppDelegate.swift */,
-				CF3A820520607BC300FCC8FA /* ViewController.swift */,
-				CF3A820720607BC300FCC8FA /* Main.storyboard */,
 				CF3A820A20607BC300FCC8FA /* Assets.xcassets */,
-				CF3A820C20607BC300FCC8FA /* LaunchScreen.storyboard */,
 				CF3A820F20607BC300FCC8FA /* Info.plist */,
+				CF07AE2120648DE900CCB783 /* Misc */,
+				CF07AE1F20648DC600CCB783 /* Model */,
+				CF07AE1E20648D6700CCB783 /* View */,
+				CF07AE2020648DD900CCB783 /* Controller */,
 			);
 			path = Pretty_Tables;
 			sourceTree = "<group>";
@@ -91,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Shane Talbert";
 				TargetAttributes = {
 					CF3A81FF20607BC300FCC8FA = {
@@ -123,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3A8218206096FB00FCC8FA /* ReceiptCell.xib in Resources */,
 				CF3A820E20607BC300FCC8FA /* LaunchScreen.storyboard in Resources */,
 				CF3A820B20607BC300FCC8FA /* Assets.xcassets in Resources */,
 				CF3A820920607BC300FCC8FA /* Main.storyboard in Resources */,
@@ -136,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF07AE252064967C00CCB783 /* ReceiptStore.swift in Sources */,
+				CF07AE232064905300CCB783 /* Receipt.swift in Sources */,
 				CF3A820620607BC300FCC8FA /* ViewController.swift in Sources */,
 				CF3A820420607BC300FCC8FA /* AppDelegate.swift in Sources */,
+				CF3A8217206096FB00FCC8FA /* ReceiptCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +225,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +233,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +284,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +292,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -281,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shane.talbert1-gmail.com.Pretty-Tables";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shane.talbert1-gmail.com.Pretty-Tables";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
