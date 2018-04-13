@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ReceiptCell: UITableViewCell {
+//may need to inherit from the swipe cell
+//UITableViewCell
+
+class ReceiptCell:  SwipeTableViewCell{
 
     
 

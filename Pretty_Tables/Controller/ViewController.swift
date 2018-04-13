@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -94,11 +95,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! ReceiptCell
+        //was a ReceiptCell  as! SwipeTableViewCell
+        //my Receipt Cell inherits from SwipeTableViewCell which inherits from Tableviewcell
         
         cell.lblReceiptName.text = mySeperatedReceipts[indexPath.section][indexPath.row].note
         cell.lblIsVerified.text = mySeperatedReceipts[indexPath.section][indexPath.row].isVerified
         cell.lblDate.text = mySeperatedReceipts[indexPath.section][indexPath.row].date
         cell.lblCreditCard.text = mySeperatedReceipts[indexPath.section][indexPath.row].creditCard
+        
+        //without this line the cell will not make the swipe
+        cell.delegate = self
         return cell
     }
     
@@ -113,6 +119,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tblView.estimatedRowHeight = 160.0
         
     }
+    
+}
+
+//MARK: - Swipe cell delegate methods
+
+//keeps your code cleaner.  Instead of placing these at the end of your class can put them as extensions as opposed to protocols.
+extension ViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        guard orientation == .right else { return nil }
+        
+        let verifiedAction = SwipeAction(style: .destructive, title: "Verified") { action, indexPath in
+            // handle action by updating model with deletion
+            print("verified action initiated on \(indexPath.section), \(indexPath.row)")
+            print("Thing that would be changed is \(self.mySeperatedReceipts[indexPath.section][indexPath.row].information)")
+        }
+        
+        // customize the action appearance
+        verifiedAction.image = UIImage(named: "slice1")
+        
+        return [verifiedAction]
+    }
+    
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        //options.expansionStyle = .destructive
+        
+        //this will cause edit action for row action to fire
+        options.expansionStyle = .selection
+        options.transitionStyle = .border
+        return options
+    }
+    
     
 }
 

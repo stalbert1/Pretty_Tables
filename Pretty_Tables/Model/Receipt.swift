@@ -58,5 +58,12 @@ class Receipt {
         }
     }
     
+    var information: String {
+        get {
+            let receiptInfo = ("\(_creditCard) card \(_note)")
+            return receiptInfo
+        }
+    }
+    
 
 }

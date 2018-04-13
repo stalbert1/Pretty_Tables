@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DC20890C4FDD2D5805FF59C /* Pods_Pretty_Tables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76321714EDF29E3AD592FB7 /* Pods_Pretty_Tables.framework */; };
 		CF07AE232064905300CCB783 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07AE222064905300CCB783 /* Receipt.swift */; };
 		CF07AE252064967C00CCB783 /* ReceiptStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07AE242064967C00CCB783 /* ReceiptStore.swift */; };
 		CF3A820420607BC300FCC8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A820320607BC300FCC8FA /* AppDelegate.swift */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6DACAD56E02BD71A66E82B98 /* Pods-Pretty_Tables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pretty_Tables.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pretty_Tables/Pods-Pretty_Tables.release.xcconfig"; sourceTree = "<group>"; };
+		973D2A29BE424638586BE2EB /* Pods-Pretty_Tables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pretty_Tables.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pretty_Tables/Pods-Pretty_Tables.debug.xcconfig"; sourceTree = "<group>"; };
+		C76321714EDF29E3AD592FB7 /* Pods_Pretty_Tables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pretty_Tables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF07AE222064905300CCB783 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		CF07AE242064967C00CCB783 /* ReceiptStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptStore.swift; sourceTree = "<group>"; };
 		CF3A820020607BC300FCC8FA /* Pretty_Tables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pretty_Tables.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,12 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DC20890C4FDD2D5805FF59C /* Pods_Pretty_Tables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33A3585043B6CB14C6657129 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				973D2A29BE424638586BE2EB /* Pods-Pretty_Tables.debug.xcconfig */,
+				6DACAD56E02BD71A66E82B98 /* Pods-Pretty_Tables.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F4864F970BC02F60576492F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C76321714EDF29E3AD592FB7 /* Pods_Pretty_Tables.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF07AE1E20648D6700CCB783 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +106,8 @@
 			children = (
 				CF3A820220607BC300FCC8FA /* Pretty_Tables */,
 				CF3A820120607BC300FCC8FA /* Products */,
+				33A3585043B6CB14C6657129 /* Pods */,
+				7F4864F970BC02F60576492F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF3A821220607BC300FCC8FA /* Build configuration list for PBXNativeTarget "Pretty_Tables" */;
 			buildPhases = (
+				D58FF9BEB2E2264766EE61D6 /* [CP] Check Pods Manifest.lock */,
 				CF3A81FC20607BC300FCC8FA /* Sources */,
 				CF3A81FD20607BC300FCC8FA /* Frameworks */,
 				CF3A81FE20607BC300FCC8FA /* Resources */,
+				D0608815664A11DC99F6B360 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +201,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D0608815664A11DC99F6B360 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pretty_Tables/Pods-Pretty_Tables-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pretty_Tables/Pods-Pretty_Tables-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D58FF9BEB2E2264766EE61D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pretty_Tables-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF3A81FC20607BC300FCC8FA /* Sources */ = {
@@ -324,6 +389,7 @@
 		};
 		CF3A821320607BC300FCC8FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973D2A29BE424638586BE2EB /* Pods-Pretty_Tables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -339,6 +405,7 @@
 		};
 		CF3A821420607BC300FCC8FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DACAD56E02BD71A66E82B98 /* Pods-Pretty_Tables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
